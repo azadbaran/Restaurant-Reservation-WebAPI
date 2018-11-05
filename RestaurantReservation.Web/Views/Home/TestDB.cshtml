@@ -1,0 +1,17 @@
+﻿@using RestaurantReservation.Data.EF
+@model RestaurantReservation.Data.EF.MyContext
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Test DB - row count</h2>
+
+Restorani: @Model.Restoran.Count() <br />
+Rezervacije: @Model.Rezervacija.Count() <br />
+Korisnici: @Model.Korisnik.Count() <br />
+
+
+
+@Html.ActionLink("Back", "Index")
