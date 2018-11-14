@@ -39,7 +39,7 @@ namespace RestaurantReservation.Data.EF
 
             for (int i = 0; i < 10; i++)
             {
-                rezervacije.Add(new Rezervacija { Restoran = restorani.MyRandom(), Korisnik =korisnici.MyRandom(),Vrsta="Vecera",Datum=DateTime.Now,Vrijeme=DateTime.Now });
+                rezervacije.Add(new Rezervacija { Restoran = restorani.MyRandom(), Korisnik =korisnici.MyRandom(),Vrsta="Vecera",Datum=DateTime.Now,Vrijeme=DateTime.Now,BrojOsoba=5 });
             }
            
            

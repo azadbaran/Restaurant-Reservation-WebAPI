@@ -5,5 +5,8 @@
         public string ime;
         public string prezime;
         public string email;
+        public string username;
+        public string password;
+
     }
 }

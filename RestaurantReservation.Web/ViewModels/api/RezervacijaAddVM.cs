@@ -7,12 +7,12 @@ namespace RestaurantReservation.Web.ViewModels.api
 {
     public class RezervacijaAddVM
     {
-        public int? id;
+     
         public string vrsta;
-        public DateTime datum;
-        public DateTime vrijeme;
+        public string datum;
+        public string vrijeme;
         public int korsnikId;
         public int restoranId;
-
+        public int brojOsoba;
     }
 }

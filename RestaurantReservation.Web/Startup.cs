@@ -24,7 +24,7 @@ namespace RestaurantReservation.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<MyContext>(x =>
-                x.UseSqlServer(Configuration.GetConnectionString("Lokalni"))
+                x.UseSqlServer(Configuration.GetConnectionString("MyConnection"))
             );
 
             services.AddMvc(options =>

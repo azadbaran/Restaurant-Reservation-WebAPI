@@ -16,8 +16,10 @@ namespace RestaurantReservation.Web.ViewModels.api
             public string vrijeme;
             public string korsnik;
             public string restoran;
+            public int brojOsoba;
 
-          
+
+
         }
 
         public List<Row> rows;

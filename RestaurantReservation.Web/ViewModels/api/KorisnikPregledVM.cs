@@ -10,6 +10,8 @@ namespace RestaurantReservation.Web.ViewModels.api
             public string ime;
             public string prezime;
             public string email;
+            public string password;
+
         }
 
         public List<Row> rows;

@@ -1,11 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
 
 namespace RestaurantReservation.Data.Migrations
 {
-    public partial class inic1 : Migration
+    public partial class ini : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -29,11 +28,11 @@ namespace RestaurantReservation.Data.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Adresa = table.Column<string>(nullable: true),
-                    Grad = table.Column<string>(nullable: true),
-                    Mail = table.Column<string>(nullable: true),
                     Naziv = table.Column<string>(nullable: true),
                     Opis = table.Column<string>(nullable: true),
+                    Grad = table.Column<string>(nullable: true),
+                    Adresa = table.Column<string>(nullable: true),
+                    Mail = table.Column<string>(nullable: true),
                     Telefon = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -47,11 +46,11 @@ namespace RestaurantReservation.Data.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    DeviceInfo = table.Column<string>(nullable: true),
-                    IpAdresa = table.Column<string>(nullable: true),
-                    KorisnickiNalogId = table.Column<int>(nullable: false),
                     Vrijednost = table.Column<string>(nullable: true),
-                    VrijemeEvidentiranja = table.Column<DateTime>(nullable: false)
+                    KorisnickiNalogId = table.Column<int>(nullable: false),
+                    VrijemeEvidentiranja = table.Column<DateTime>(nullable: false),
+                    IpAdresa = table.Column<string>(nullable: true),
+                    DeviceInfo = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -71,9 +70,9 @@ namespace RestaurantReservation.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     Ime = table.Column<string>(nullable: true),
-                    KorisnickiNalogId = table.Column<int>(nullable: true),
+                    Prezime = table.Column<string>(nullable: true),
                     Mail = table.Column<string>(nullable: true),
-                    Prezime = table.Column<string>(nullable: true)
+                    KorisnickiNalogId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -92,11 +91,12 @@ namespace RestaurantReservation.Data.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Vrsta = table.Column<string>(nullable: true),
                     Datum = table.Column<DateTime>(nullable: false),
-                    KorisnikId = table.Column<int>(nullable: true),
-                    RestoranId = table.Column<int>(nullable: true),
                     Vrijeme = table.Column<DateTime>(nullable: false),
-                    Vrsta = table.Column<string>(nullable: true)
+                    BrojOsoba = table.Column<int>(nullable: false),
+                    RestoranId = table.Column<int>(nullable: true),
+                    KorisnikId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {

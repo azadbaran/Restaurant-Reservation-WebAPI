@@ -26,11 +26,15 @@ namespace RestaurantReservation.Web.Controllers.api
                 .Where(w => w.KorisnickiNalog.KorisnickoIme == input.Username && w.KorisnickiNalog.Lozinka == input.Password)
                 .Select(s => new AutentifikacijaResultVM
                 {
+                    korisnikId=s.Id,
                     ime = s.Ime,
                     korisnickiNalogId = s.KorisnickiNalogId,
                     prezime = s.Prezime,
                     username = s.KorisnickiNalog.KorisnickoIme,
                     token = token,
+                    mail=s.Mail,
+                    password=s.KorisnickiNalog.Lozinka
+                
                 }).SingleOrDefault();
 
 

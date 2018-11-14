@@ -9,7 +9,7 @@ using RestaurantReservation.Web.ViewModels.api;
 
 namespace RestaurantReservation.Web.Controllers.api
 {
-   // [MyApiAuthorizeAttribute] // ne radi kad je ukljucena autorizacija
+    [MyApiAuthorizeAttribute] 
     public class RestoranController : MyWebApiBaseController
     {
         public RestoranController(MyContext db) : base(db)

@@ -11,6 +11,8 @@ namespace RestaurantReservation.Data.EntityModels
         public string Vrsta { get; set; }
         public DateTime Datum { get; set; }
         public DateTime Vrijeme { get; set; }
+        public int BrojOsoba { get; set; }
+
 
         [ForeignKey(nameof(Restoran))]
         public int? RestoranId { get; set; }
